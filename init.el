@@ -41,8 +41,6 @@ There are two things you can do about this warning:
 (global-set-key (kbd "<escape>") 'god-mode-all)
 (global-set-key (kbd "C-i") 'god-mode-all)
 (define-key god-local-mode-map (kbd "i") 'god-local-mode)
-(setq god-exempt-major-modes nil)
-(setq god-exempt-predicates nil)
 (defun my-update-cursor ()
   (setq cursor-type (if (or god-local-mode buffer-read-only)
 			'box
