@@ -68,3 +68,6 @@ There are two things you can do about this warning:
 (mmm-add-mode-ext-class nil "\\.j2\\'" 'jinja2)
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
+(autoload 'python-mode "python-mode" "Python Mode." t)
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+(add-to-list 'interpreter-mode-alist '("python" . python-mode))
