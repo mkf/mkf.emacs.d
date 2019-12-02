@@ -66,4 +66,5 @@ There are two things you can do about this warning:
 (require 'mmm-jinja2)
 (add-to-list 'auto-mode-alist '("\\.html\\.j2\\'" . html-mode))
 (mmm-add-mode-ext-class nil "\\.j2\\'" 'jinja2))
-
+(require 'magit)
+(global-set-key (kbd "C-x g") 'magit-status)
