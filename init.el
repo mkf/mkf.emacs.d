@@ -21,6 +21,9 @@ There are two things you can do about this warning:
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(custom-enabled-themes nil)
  '(package-selected-packages
    (quote
     (mmm-mako python-mode mmm-jinja2 magit emmet-mode which-key))))
@@ -32,11 +35,11 @@ There are two things you can do about this warning:
  )
 (require 'which-key)
 ;; (which-key-mode)
-(require 'smex)
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-x") 'smex-major-mode-commands)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+;; (require 'smex)
+;; (smex-initialize)
+;; (global-set-key (kbd "M-x") 'smex)
+;; (global-set-key (kbd "M-x") 'smex-major-mode-commands)
+;; (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 (require 'god-mode)
 (global-set-key (kbd "<escape>") 'god-mode-all)
 (global-set-key (kbd "C-i") 'god-mode-all)
@@ -69,3 +72,7 @@ There are two things you can do about this warning:
 (autoload 'python-mode "python-mode" "Python Mode." t)
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
+;; (defun smex-update-after-load (unused)
+;;       (when (boundp 'smex-cache)
+;;         (smex-update)))
+;; (add-hook 'after-load-functions 'smex-update-after-load)
