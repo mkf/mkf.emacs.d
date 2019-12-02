@@ -22,9 +22,12 @@ There are two things you can do about this warning:
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (wombat)))
+ '(haskell-mode-hook
+   (quote
+    (capitalized-words-mode flyspell-prog-mode haskell-decl-scan-mode haskell-indent-mode)))
  '(package-selected-packages
    (quote
-    (mmm-mako python-mode mmm-jinja2 magit emmet-mode which-key))))
+    (haskell-mode mmm-mako python-mode mmm-jinja2 magit emmet-mode which-key))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -40,7 +43,7 @@ There are two things you can do about this warning:
 ;; (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 (require 'god-mode)
 (global-set-key (kbd "<escape>") 'god-mode-all)
-(global-set-key (kbd "C-i") 'god-mode-all)
+;; (global-set-key (kbd "C-i") 'god-mode-all)
 (define-key god-local-mode-map (kbd "i") 'god-local-mode)
 (defun my-update-cursor ()
   (setq cursor-type (if (or god-local-mode buffer-read-only)
@@ -74,3 +77,4 @@ There are two things you can do about this warning:
 ;;       (when (boundp 'smex-cache)
 ;;         (smex-update)))
 ;; (add-hook 'after-load-functions 'smex-update-after-load)
+(require 'haskell-mode)
