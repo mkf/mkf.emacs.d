@@ -28,7 +28,7 @@ There are two things you can do about this warning:
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (haskell-mode mmm-mako python-mode mmm-jinja2 magit emmet-mode which-key))))
+    (forth-mode haskell-mode mmm-mako python-mode mmm-jinja2 magit emmet-mode which-key))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -79,6 +79,6 @@ There are two things you can do about this warning:
 ;;         (smex-update)))
 ;; (add-hook 'after-load-functions 'smex-update-after-load)
 (require 'haskell-mode)
-(autoload 'forth-mode "gforth.el")
-(autoload 'forth-block-mode "gforth.el")
+;;(autoload 'forth-mode "gforth.el")
+;;(autoload 'forth-block-mode "gforth.el")
 (add-to-list 'auto-mode-alist '("\\.fs$" . forth-mode))
