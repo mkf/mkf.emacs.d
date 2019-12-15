@@ -25,6 +25,7 @@ There are two things you can do about this warning:
  '(haskell-mode-hook
    (quote
     (capitalized-words-mode flyspell-prog-mode haskell-decl-scan-mode haskell-indent-mode)))
+ '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
     (haskell-mode mmm-mako python-mode mmm-jinja2 magit emmet-mode which-key))))
@@ -78,3 +79,6 @@ There are two things you can do about this warning:
 ;;         (smex-update)))
 ;; (add-hook 'after-load-functions 'smex-update-after-load)
 (require 'haskell-mode)
+(autoload 'forth-mode "gforth.el")
+(autoload 'forth-block-mode "gforth.el")
+(add-to-list 'auto-mode-alist '("\\.fs$" . forth-mode))
