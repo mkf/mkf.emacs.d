@@ -28,7 +28,7 @@ There are two things you can do about this warning:
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (py-autopep8 reformatter pylint direnv luarocks lua-mode wanderlust idris-mode nix-mode dockerfile-mode ocp-indent tuareg merlin forth-mode haskell-mode python-mode magit emmet-mode which-key))))
+    (company-tabnine company py-autopep8 reformatter pylint direnv luarocks lua-mode wanderlust idris-mode nix-mode dockerfile-mode ocp-indent tuareg merlin forth-mode haskell-mode mmm-mako python-mode mmm-jinja2 magit emmet-mode which-key))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -58,3 +58,8 @@ There are two things you can do about this warning:
 ;;(autoload 'forth-mode "gforth.el")
 ;;(autoload 'forth-block-mode "gforth.el")
 (add-to-list 'auto-mode-alist '("\\.fs$" . forth-mode))
+
+(mapc (lambda (pair)
+        (define-key input-decode-map (vector (aref pair 0)) (aref pair 1)))
+      '([dead-circumflex ?^]
+        [dead-grave ?`]))
