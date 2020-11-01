@@ -28,7 +28,7 @@ There are two things you can do about this warning:
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (company-tabnine company py-autopep8 reformatter pylint direnv luarocks lua-mode wanderlust idris-mode nix-mode dockerfile-mode ocp-indent tuareg merlin forth-mode haskell-mode mmm-mako python-mode mmm-jinja2 magit emmet-mode which-key))))
+    (dhall-mode cargo rust-mode ## company-tabnine company py-autopep8 reformatter pylint direnv luarocks lua-mode wanderlust idris-mode nix-mode dockerfile-mode ocp-indent tuareg merlin forth-mode haskell-mode mmm-mako python-mode mmm-jinja2 magit emmet-mode which-key))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
