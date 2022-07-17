@@ -16,7 +16,7 @@
  '(display-time-mode t)
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(ledger-mode company-tabnine company smartparens racket-mode rainbow-delimiters ##))
+   '(magit fvwm-mode ledger-mode company-tabnine company smartparens racket-mode rainbow-delimiters ##))
  '(tool-bar-mode nil)
  '(tool-bar-position 'right))
 (custom-set-faces
